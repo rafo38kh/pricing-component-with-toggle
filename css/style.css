@@ -13,6 +13,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
@@ -22,19 +23,47 @@ body {
   background-repeat: no-repeat;
   background-position: top 0 right -20rem;
 }
+@media (min-width: 1140px) {
+  body {
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-position: top right, bottom left;
+  }
+}
 
+.pricing {
+  color: #494c5f;
+  width: 88%;
+  text-align: center;
+  padding: 7rem 0;
+}
+.pricing__toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 4rem 0 7rem 0;
+  font-size: 1.4rem;
+}
+.pricing__annually {
+  color: #b3b5c6;
+}
 .pricing__label {
   position: relative;
   display: inline-block;
-  width: 12rem;
-  height: 6rem;
+  width: 5rem;
+  height: 3rem;
   margin: 0 1rem;
+  transition: 0.3s;
+}
+.pricing__label:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 .pricing__span {
   position: absolute;
   cursor: pointer;
   inset: 0;
-  background-color: #bdccff;
+  background: linear-gradient(to top right, #a3a8f0, #696fdd);
   transition: 0.3s;
   border-radius: 4rem;
 }
@@ -44,19 +73,127 @@ body {
 .pricing__span:before {
   position: absolute;
   content: "";
-  height: 5rem;
-  width: 5rem;
-  left: 0.5rem;
-  bottom: 0.5rem;
+  height: 2.2rem;
+  width: 2.2rem;
+  left: 0.4rem;
+  bottom: 0.4rem;
   background-color: white;
   transition: 0.3s;
   border-radius: 5rem;
 }
-.pricing input:checked + .pricing__span {
-  background-color: #7ce8dc;
-}
 .pricing input:checked + .pricing__span:before {
-  transform: translateX(6rem);
+  transform: translateX(2rem);
+}
+.pricing__monthly {
+  color: #b3b5c6;
+}
+@media (min-width: 1140px) {
+  .pricing__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.pricing__card {
+  color: #6d708d;
+  background-color: white;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  padding: 3rem;
+  max-width: 55rem;
+  margin: 0 auto 3rem auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media (min-width: 1140px) {
+  .pricing__card {
+    margin: 0;
+    min-width: 35rem;
+  }
+}
+@media (min-width: 1140px) {
+  .pricing__card--left {
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+@media (min-width: 1140px) {
+  .pricing__card--right {
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+.pricing__card--prof {
+  color: white;
+  background: linear-gradient(to bottom right, #a3a8f0, #696fdd);
+}
+@media (min-width: 1140px) {
+  .pricing__card--prof {
+    padding: 5.5rem 3rem;
+  }
+}
+.pricing__card-type {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.pricing__card-price {
+  color: #494c5f;
+  font-size: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pricing__card-price--span {
+  font-size: 4rem;
+}
+.pricing__card-price--prof {
+  color: white;
+}
+.pricing__card-storage {
+  border-top: 0.05rem solid #b3b5c6;
+  margin: 2.5rem 0 1.5rem 0;
+  font-size: 1.5rem;
+  padding-top: 1.8rem;
+}
+.pricing__card-users {
+  border-top: 0.05rem solid #b3b5c6;
+  margin: 1.8rem 0;
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+}
+.pricing__card-size {
+  border-top: 0.05rem solid #b3b5c6;
+  border-bottom: 0.05rem solid #b3b5c6;
+  margin: 1.8rem 0;
+  font-size: 1.5rem;
+  padding: 1.5rem 0;
+}
+.pricing__card-button {
+  color: white;
+  background: linear-gradient(to top right, #a3a8f0, #696fdd);
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #b3b5c6;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin-top: 1.5rem;
+  padding: 1.4rem;
+  transition: 0.3s;
+}
+.pricing__card-button:hover {
+  cursor: pointer;
+  background: transparent;
+  color: #696fdd;
+  border: 0.1rem solid #b3b5c6;
+}
+.pricing__card-button--prof {
+  background: white;
+  color: #696fdd;
+}
+.pricing__card-button--prof:hover {
+  background: transparent;
+  color: white;
+  border: 0.1rem solid white;
 }
 
 /*# sourceMappingURL=style.css.map */

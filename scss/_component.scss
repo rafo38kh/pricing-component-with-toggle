@@ -1,29 +1,52 @@
 @use "./base" as *;
+
 .pricing {
-  &__header {
-  }
-  &__title {
-  }
+  color: $color--darkGrayishBlue;
+  width: 88%;
+  text-align: center;
+  padding: 7rem 0;
+
+  //   &__header {
+  //   }
+  //   &__title {
+  //   }
 
   &__toggle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem 0 7rem 0;
+    font-size: 1.4rem;
   }
 
   &__annually {
+    color: $color--lightGrayishBlue;
   }
 
   &__label {
     position: relative;
     display: inline-block;
-    width: 12rem;
-    height: 6rem;
+    width: 5rem;
+    height: 3rem;
     margin: 0 1rem;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
   }
 
   &__span {
     position: absolute;
     cursor: pointer;
     inset: 0;
-    background-color: hsl(226, 100%, 87%);
+    background: linear-gradient(
+      to top right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
     transition: 0.3s;
     border-radius: 4rem;
   }
@@ -35,60 +58,160 @@
   &__span:before {
     position: absolute;
     content: "";
-    height: 5rem;
-    width: 5rem;
-    left: 0.5rem;
-    bottom: 0.5rem;
+    height: 2.2rem;
+    width: 2.2rem;
+    left: 0.4rem;
+    bottom: 0.4rem;
     background-color: hsl(0, 0%, 100%);
     transition: 0.3s;
     border-radius: 5rem;
   }
 
-  input:checked + .pricing__span {
-    background-color: #7ce8dc;
-  }
-
   input:checked + .pricing__span:before {
-    transform: translateX(6rem);
+    transform: translateX(2rem);
   }
 
-  &__montly {
+  &__monthly {
+    color: $color--lightGrayishBlue;
   }
 
   &__cards {
+    @media (min-width: 1140px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__card {
+    color: $color--grayishBlue;
+    background-color: $color--white;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    padding: 3rem;
+    max-width: 55rem;
+    margin: 0 auto 3rem auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    @media (min-width: 1140px) {
+      margin: 0;
+      min-width: 35rem;
+    }
+
+    &--left {
+      @media (min-width: 1140px) {
+        border-radius: 1rem 0 0 1rem;
+      }
+    }
+
+    &--right {
+      @media (min-width: 1140px) {
+        border-radius: 0 1rem 1rem 0;
+      }
+    }
+
     &--prof {
+      color: $color--white;
+      background: linear-gradient(
+        to bottom right,
+        hsl(236, 72%, 79%),
+        hsl(237, 63%, 64%)
+      );
+
+      @media (min-width: 1140px) {
+        padding: 5.5rem 3rem;
+      }
     }
 
     &-type {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+
       &--prof {
       }
     }
 
     &-price {
+      color: $color--darkGrayishBlue;
+      font-size: 7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      &--span {
+        font-size: 4rem;
+      }
       &--prof {
+        color: $color--white;
       }
     }
 
-    &storage {
+    &-storage {
+      border-top: 0.05rem solid $color--lightGrayishBlue;
+      margin: 2.5rem 0 1.5rem 0;
+      font-size: 1.5rem;
+      padding-top: 1.8rem;
+
       &--prof {
       }
     }
 
     &-users {
+      border-top: 0.05rem solid $color--lightGrayishBlue;
+      margin: 1.8rem 0;
+      font-size: 1.5rem;
+      padding-top: 1.5rem;
+
       &--prof {
       }
     }
 
     &-size {
+      border-top: 0.05rem solid $color--lightGrayishBlue;
+      border-bottom: 0.05rem solid $color--lightGrayishBlue;
+      margin: 1.8rem 0;
+      font-size: 1.5rem;
+      padding: 1.5rem 0;
+
       &--prof {
       }
     }
 
     &-button {
+      color: $color--white;
+      background: linear-gradient(
+        to top right,
+        hsl(236, 72%, 79%),
+        hsl(237, 63%, 64%)
+      );
+      width: 100%;
+      text-transform: uppercase;
+      border-radius: 0.5rem;
+      border: 0.1rem solid $color--lightGrayishBlue;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.2rem;
+      margin-top: 1.5rem;
+      padding: 1.4rem;
+      transition: 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        background: transparent;
+        color: hsl(237, 63%, 64%);
+        border: 0.1rem solid $color--lightGrayishBlue;
+      }
+
       &--prof {
+        background: $color--white;
+        color: hsl(237, 63%, 64%);
+
+        &:hover {
+          background: transparent;
+          color: $color--white;
+          border: 0.1rem solid $color--white;
+        }
       }
     }
   }

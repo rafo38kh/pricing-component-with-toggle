@@ -4,6 +4,7 @@ $color--veryLightGrayishBlue: hsl(240, 78%, 98%);
 $color--lightGrayishBlue: hsl(234, 14%, 74%);
 $color--grayishBlue: hsl(233, 13%, 49%);
 $color--darkGrayishBlue: hsl(232, 13%, 33%);
+$color--white: hsl(0, 0%, 100%);
 
 *,
 *::before,
@@ -20,6 +21,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
@@ -28,4 +30,8 @@ body {
   background-image: url(../images/bg-top.svg);
   background-repeat: no-repeat;
   background-position: top 0 right -20rem;
+  @media (min-width: 1140px) {
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-position: top right, bottom left;
+  }
 }
