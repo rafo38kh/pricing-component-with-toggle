@@ -24,10 +24,10 @@ This is a solution to the [Pricing Component with Toggle Challenge on Frontend M
 
 ![screenshot](./images/screenshot.png)
 
-### Links
+### Links}
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [https://www.frontendmentor.io/solutions/pricing-component-with-toggle-with-bem-css-flexbox-and-vanilla-js-caH67PNsJ](https://www.frontendmentor.io/solutions/pricing-component-with-toggle-with-bem-css-flexbox-and-vanilla-js-caH67PNsJ)
+- Live Site URL: [https://rafo38kh.github.io/pricing-component-with-toggle/](https://rafo38kh.github.io/pricing-component-with-toggle/)
 
 ## My process
 

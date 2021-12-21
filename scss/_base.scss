@@ -1,4 +1,4 @@
-$gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+$gradient: #a3a8f0 to #696fdd;
 
 $color--veryLightGrayishBlue: hsl(240, 78%, 98%);
 $color--lightGrayishBlue: hsl(234, 14%, 74%);
@@ -22,6 +22,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
