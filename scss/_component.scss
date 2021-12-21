@@ -1,0 +1,95 @@
+@use "./base" as *;
+.pricing {
+  &__header {
+  }
+  &__title {
+  }
+
+  &__toggle-wrapper {
+  }
+
+  &__annually {
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    width: 12rem;
+    height: 6rem;
+    margin: 0 1rem;
+  }
+
+  &__span {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: hsl(226, 100%, 87%);
+    transition: 0.3s;
+    border-radius: 4rem;
+  }
+
+  &__label input {
+    display: none;
+  }
+
+  &__span:before {
+    position: absolute;
+    content: "";
+    height: 5rem;
+    width: 5rem;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    background-color: hsl(0, 0%, 100%);
+    transition: 0.3s;
+    border-radius: 5rem;
+  }
+
+  input:checked + .pricing__span {
+    background-color: #7ce8dc;
+  }
+
+  input:checked + .pricing__span:before {
+    transform: translateX(6rem);
+  }
+
+  &__montly {
+  }
+
+  &__cards {
+  }
+
+  &__card {
+    &--prof {
+    }
+
+    &-type {
+      &--prof {
+      }
+    }
+
+    &-price {
+      &--prof {
+      }
+    }
+
+    &storage {
+      &--prof {
+      }
+    }
+
+    &-users {
+      &--prof {
+      }
+    }
+
+    &-size {
+      &--prof {
+      }
+    }
+
+    &-button {
+      &--prof {
+      }
+    }
+  }
+}
